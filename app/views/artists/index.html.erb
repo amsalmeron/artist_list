@@ -1,0 +1,8 @@
+<% @artists.each do |artist| %>
+  <h1><%= artist.name %></h1>
+  <h4>Record created at: <%= artist.created_at %> </h4>
+  <p>Born in <%= artist.birth_year %></p>
+  <p>Still living: <%= artist.living %></p>
+<% end %>
+
+<%= link_to "New Artists", "/artists/new" %>

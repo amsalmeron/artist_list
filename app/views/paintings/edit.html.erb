@@ -1,0 +1,9 @@
+<%= form_with url: "/paintings/#{@painting.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :year_finished %>
+  <%= form.text_field :year_finished %>
+  <%= form.label :abstract %>
+  <%= form.text_field :abstract %>
+  <%= form.submit "Update Painting" %>
+<% end %>

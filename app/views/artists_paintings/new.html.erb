@@ -1,0 +1,10 @@
+<%= form_with url: "/artists/#{@artist.id}/paintings", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :year_finished %>
+  <%= form.text_field :year_finished %>
+  <%= form.label :abstract %>
+  <%= form.text_field :abstract %>
+
+  <%= form.submit "Create Painting" %>
+<% end %>

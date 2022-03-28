@@ -1,0 +1,4 @@
+<h1><%= @painting.name %></h1>
+<p> Finished in <%= @painting.year_finished %>.</p>
+<p> Condisered abstract: <%= @painting.abstract %> </p>
+<%= link_to "Update Painting", "/paintings/#{@painting.id}/edit" %>

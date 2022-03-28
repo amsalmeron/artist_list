@@ -1,0 +1,6 @@
+<h1><%= @artist.name %></h1>
+Birth year: <%= @artist.birth_year %><br>
+Alive: <%= @artist.living %><br>
+Number of lsited paintings: <%= @painting_count %><br>
+<%= link_to "Paintings", "#{@artist.id}/paintings"%>
+<p> <%= button_to "Edit #{@artist.name}", "/artists/#{@artist.id}/edit", method: :get %> </p>
