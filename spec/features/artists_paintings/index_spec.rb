@@ -16,6 +16,10 @@ RSpec.describe 'artist index page' do
     expect(page).to have_content(painting_2.abstract)
   end
 
+  # Create delete button with url “/parents?order=alphabetical” and the add a
+  # order_alphabetically method to your model Then in your parentcontroller#index
+  # method you add the “if params[:order] == alphabetical” logic
+
   it 'displays link and when clicked sorts painting by alphabetical order' do
     artist_1 = Artist.create!(name: "Picasso", birth_year: 1881, living: false)
     painting_2 = Painting.create!(name: "The Weeping Woman", year_finished: 1937, abstract: true, artist_id: artist_1.id)
@@ -24,6 +28,7 @@ RSpec.describe 'artist index page' do
     visit "/artists/#{artist_1.id}/paintings"
     expect(painting_2.name).to appear_before(painting_1.name)
     click_link "Sort by Alphabetical Order"
+    expect(current_path).to eq("/artists/#{artist_1.id}/paintings")
     expect(painting_1.name).to appear_before(painting_2.name)
 
   end

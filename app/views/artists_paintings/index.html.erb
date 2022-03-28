@@ -4,5 +4,5 @@
   Uses abstract styling: <%= painting.abstract %>
 <% end %>
 
-<%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings" %>
+<%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings?sort=asc", method: :get %>
 <%= link_to "Add New Painting", "/artists/#{@artist.id}/paintings/new" %>

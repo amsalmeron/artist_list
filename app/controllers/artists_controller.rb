@@ -27,8 +27,10 @@ class ArtistsController < ApplicationController
     redirect_to "/artists/#{artist.id}"
   end
 
-  def artist_params
-    params.permit(:name, :birth_year, :living)
-  end
+  private
+
+    def artist_params
+      params.permit(:name, :birth_year, :living)
+    end
 
 end

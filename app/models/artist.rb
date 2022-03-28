@@ -4,8 +4,12 @@ class Artist < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :birth_year
   validates :living, inclusion: [true, false]
-  
+
   def self.sort_alphabetically
-    Artist.order(:name)
+    order(:name)
+  end
+
+  def sort_alpha
+    self.paintings.sort_by {|painting| painting.name}
   end
 end

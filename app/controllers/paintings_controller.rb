@@ -17,7 +17,9 @@ class PaintingsController < ApplicationController
     redirect_to "/paintings/#{painting.id}"
   end
 
-  def painting_params
-    params.permit(:name, :year_finished, :abstract)
-  end
+  private
+
+    def painting_params
+      params.permit(:name, :year_finished, :abstract)
+    end
 end
