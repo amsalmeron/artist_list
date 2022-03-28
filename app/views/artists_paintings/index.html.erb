@@ -2,6 +2,7 @@
   <h2><%= painting.name %></h2>
   Finished in: <%= painting.year_finished %><br>
   Uses abstract styling: <%= painting.abstract %>
+  <p> <%= button_to "Delete #{painting.name}", "/paintings/#{painting.id}", method: :delete %></p>
 <% end %>
 
 <%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings?sort=asc", method: :get %>

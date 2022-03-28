@@ -255,6 +255,8 @@
           1,
           1,
           1,
+          1,
+          null,
           null,
           1,
           1,
@@ -414,6 +416,27 @@
           null
         ]
       },
+      "/Users/antoniosalmeron/turing/2module/projects/artist_list/spec/features/artists_paintings/delete_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/antoniosalmeron/turing/2module/projects/artist_list/spec/features/artists_paintings/index_spec.rb": {
         "lines": [
           1,
@@ -432,10 +455,6 @@
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           1,
@@ -492,6 +511,26 @@
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/antoniosalmeron/turing/2module/projects/artist_list/spec/features/paintings/delete_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -640,7 +679,7 @@
       "/Users/antoniosalmeron/turing/2module/projects/artist_list/app/models/artist.rb": {
         "lines": [
           1,
-          36,
+          42,
           null,
           1,
           1,
@@ -761,7 +800,7 @@
         "lines": [
           1,
           1,
-          11,
+          15,
           null,
           null,
           1,
@@ -779,6 +818,12 @@
           null,
           null,
           1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
           null,
           1,
           1,
@@ -790,11 +835,11 @@
         "lines": [
           1,
           1,
-          5,
-          5,
+          6,
+          6,
           1,
           null,
-          4,
+          5,
           null,
           null,
           null,
@@ -822,6 +867,6 @@
         ]
       }
     },
-    "timestamp": 1648505107
+    "timestamp": 1648506316
   }
 }

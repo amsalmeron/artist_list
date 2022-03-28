@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/paintings/:id', to: 'paintings#show'
   get '/paintings/:id/edit', to: 'paintings#edit'
   patch '/paintings/:id', to: 'paintings#update'
+  delete '/paintings/:id', to: 'paintings#destroy'
+
 
   get '/artists/:id/paintings', to: 'artists_paintings#index'
   get '/artists/:id/paintings/new', to: 'artists_paintings#new'
