@@ -25,9 +25,15 @@ RSpec.describe 'artists index page' do
     expect(page).to have_content("All Artists")
   end
 
-  # it 'describes link to create a new artist' do
-  #   visit "/artists"
-  #
-  #   expect(page).to have_content("New Artist")
-  # end
+  it 'describes link to edit artist from index page' do
+    visit "/artists"
+    click_link "Edit #{@artist_1.name}"
+    expect(current_path).to eq("/artists/#{@artist_1.id}/edit")
+    visit "/artists"
+    click_link "Edit #{@artist_2.name}"
+    expect(current_path).to eq("/artists/#{@artist_2.id}/edit")
+    visit "/artists"
+    click_link "Edit #{@artist_3.name}"
+    expect(current_path).to eq("/artists/#{@artist_3.id}/edit")
+  end
 end

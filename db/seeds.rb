@@ -6,7 +6,6 @@ Painting.destroy_all
 artist_1 = Artist.create!(name: "Picasso", birth_year: 1881, living: false)
 artist_2 = Artist.create!(name: "Matisse", birth_year: 1869, living: false)
 artist_3 = Artist.create!(name: "Beeple", birth_year: 1981, living: true)
-artist_4 = Artist.create!(name: "Another One", birth_year: 1981, living: true)
 
 painting_1 = Painting.create!(name: "The Old Guitarist", year_finished: 1904, abstract: false, artist_id: artist_1.id)
 painting_2 = Painting.create!(name: "The Weeping Woman", year_finished: 1937, abstract: true, artist_id: artist_1.id)
