@@ -1,5 +1,5 @@
 class Artist < ApplicationRecord
-  has_many :paintings, -> { order(year_finished: :desc)}
+  has_many :paintings, -> { order(year_finished: :desc)}, dependent: :destroy
 
   validates_presence_of :name
   validates_presence_of :birth_year
