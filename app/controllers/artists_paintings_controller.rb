@@ -3,6 +3,8 @@ class ArtistsPaintingsController < ApplicationController
     @artist = Artist.find(params[:id])
     if params[:sort] == 'asc'
       @paintings = @artist.sort_alpha
+    elsif params[:threshold] != nil
+      @paintings = @artist.year_limit(params[:threshold])
     else
       @paintings = @artist.paintings
     end
@@ -23,7 +25,9 @@ class ArtistsPaintingsController < ApplicationController
     redirect_to "/artists/#{@artist.id}/paintings"
   end
 
-  def painting_params
-    params.permit(:name, :year_finished, :abstract)
-  end
+  private
+
+    def painting_params
+      params.permit(:name, :year_finished, :abstract)
+    end
 end

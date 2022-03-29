@@ -13,9 +13,7 @@ class Artist < ApplicationRecord
     self.paintings.sort_by {|painting| painting.name}
   end
 
-  def year_limit
-    self.paintings.map do |painting|
-      painting.destroy if painting.year_finished < painting.year_threshold
-    end
+  def year_limit(x)
+    paintings.where("year_finished > #{x}")
   end
 end
