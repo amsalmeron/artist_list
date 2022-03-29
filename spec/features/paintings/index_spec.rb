@@ -47,4 +47,31 @@ RSpec.describe 'painting index' do
     expect(current_path).to eq("/paintings/#{painting_4.id}/edit")
   end
 
+  it 'display link to delete individial paintings' do
+    artist_1 = Artist.create!(name: "Picasso", birth_year: 1881, living: false)
+    artist_2 = Artist.create!(name: "Matisse", birth_year: 1869, living: false)
+    artist_3 = Artist.create!(name: "Beeple", birth_year: 1981, living: true)
+    painting_2 = Painting.create!(name: "The Weeping Woman", year_finished: 1937, abstract: true, artist_id: artist_1.id)
+    painting_3 = Painting.create!(name: "Guernica", year_finished: 1937, abstract: true, artist_id: artist_1.id)
+    painting_4 = Painting.create!(name: "The Snail", year_finished: 1953, abstract: true, artist_id: artist_2.id)
+    painting_5 = Painting.create!(name: "Day 5000", year_finished: 2021, abstract: true, artist_id: artist_3.id)
+
+    visit '/paintings'
+    expect(page).to have_content("Guernica")
+    expect(page).to have_content("The Weeping Woman")
+    expect(page).to have_content("The Snail")
+    expect(page).to have_content("Day 5000")
+    click_link "Delete #{painting_2.name}"
+    expect(current_path).to eq("/paintings")
+    expect(page).to_not have_content("The Weeping Woman")
+    expect(page).to have_content("Guernica")
+    expect(page).to have_content("The Snail")
+    expect(page).to have_content("Day 5000")
+    click_link "Delete #{painting_4.name}"
+    expect(current_path).to eq("/paintings")
+    expect(page).to_not have_content("The Snail")
+    expect(page).to have_content("Guernica")
+    expect(page).to have_content("Day 5000")
+  end
+
 end

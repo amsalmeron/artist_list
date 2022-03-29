@@ -4,6 +4,7 @@
   <p>Born in <%= artist.birth_year %></p>
   <p>Still living: <%= artist.living %></p>
   <%= link_to "Edit #{artist.name}", "/artists/#{artist.id}/edit" %>
+  <%= link_to "Delete #{artist.name}", "/artists/#{artist.id}", method: :delete %>
 <% end %>
 
 <%= link_to "New Artists", "/artists/new" %>

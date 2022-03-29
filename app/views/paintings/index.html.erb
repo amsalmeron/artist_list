@@ -4,4 +4,5 @@
   <p> Is abstract: <%= painting.abstract %> </p>
   <%= link_to "Edit #{painting.name}", "/paintings/#{painting.id}/edit" %>
   <p> <%= button_to "Delete #{painting.name}", "/paintings/#{painting.id}", method: :delete %></p>
+  <p> <%= link_to "Delete #{painting.name}", "/paintings/#{painting.id}", method: :delete %></p>
 <% end %>

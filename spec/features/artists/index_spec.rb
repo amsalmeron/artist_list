@@ -36,4 +36,18 @@ RSpec.describe 'artists index page' do
     click_link "Edit #{@artist_3.name}"
     expect(current_path).to eq("/artists/#{@artist_3.id}/edit")
   end
+
+  it 'display link to delete individial artists' do
+    visit '/artists'
+    expect(page).to have_content("Picasso")
+    expect(page).to have_content("Beeple")
+    expect(page).to have_content("Matisse")
+    click_link "Delete #{@artist_1.name}"
+    expect(current_path).to eq("/artists")
+    expect(page).to_not have_content("Picasso")
+    click_link "Delete #{@artist_3.name}"
+    expect(current_path).to eq("/artists")
+    expect(page).to_not have_content("Beeple")
+    expect(page).to have_content("Matisse")
+  end
 end

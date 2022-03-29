@@ -20,8 +20,6 @@ class ArtistsPaintingsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
-    # @paintings = @artist.paintings.order(:name)
-    # ordered_paintings = paintings.order(:name)
     redirect_to "/artists/#{@artist.id}/paintings"
   end
 
