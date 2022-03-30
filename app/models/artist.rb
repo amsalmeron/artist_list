@@ -13,7 +13,7 @@ class Artist < ApplicationRecord
     self.paintings.sort_by {|painting| painting.name}
   end
 
-  def year_limit(x)
-    paintings.where("year_finished > #{x}")
+  def year_limit(threshold)
+    paintings.where("year_finished > ?", threshold)
   end
 end

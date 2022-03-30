@@ -330,9 +330,9 @@
           null,
           1,
           1,
-          4,
-          4,
-          4,
+          5,
+          5,
+          5,
           null,
           null,
           1,
@@ -373,6 +373,12 @@
           1,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -753,14 +759,14 @@
       "/Users/antoniosalmeron/turing/2module/projects/artist_list/app/models/artist.rb": {
         "lines": [
           1,
-          50,
+          52,
           null,
           1,
           1,
           1,
           null,
           1,
-          17,
+          18,
           null,
           null,
           1,
@@ -826,12 +832,12 @@
         "lines": [
           1,
           1,
-          16,
+          17,
           null,
           null,
           1,
-          6,
-          6,
+          7,
+          7,
           null,
           null,
           1,
@@ -947,6 +953,6 @@
         ]
       }
     },
-    "timestamp": 1648594729
+    "timestamp": 1648679517
   }
 }

@@ -1,10 +1,16 @@
+<h1>All Artists</h1><hr>
+
 <% @artists.each do |artist| %>
-  <h1><%= artist.name %></h1>
+  <h2><%= artist.name %></h2>
+  <p>ID Number: <%= "#{artist.id}" %></p>
   <h4>Record created at: <%= artist.created_at %> </h4>
   <p>Born in <%= artist.birth_year %></p>
   <p>Still living: <%= artist.living %></p>
-  <%= link_to "Edit #{artist.name}", "/artists/#{artist.id}/edit" %>
-  <%= link_to "Delete #{artist.name}", "/artists/#{artist.id}", method: :delete %>
+  <p> <%= link_to "View #{artist.name} show page", "/artists/#{artist.id}" %></p>
+  <%= link_to "Edit #{artist.name}", "/artists/#{artist.id}/edit" %><br>
+  <p> <%= link_to "Delete #{artist.name}", "/artists/#{artist.id}", method: :delete %></p>
+
+  <hr>
 <% end %>
 
 <%= link_to "New Artists", "/artists/new" %>

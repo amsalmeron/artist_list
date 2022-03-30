@@ -50,4 +50,10 @@ RSpec.describe 'artists index page' do
     expect(page).to_not have_content("Beeple")
     expect(page).to have_content("Matisse")
   end
+
+  it 'artist name is link to artist show page' do
+    visit "/artists"
+    click_link "View #{@artist_1.name} show page"
+    expect(current_path).to eq("/artists/#{@artist_1.id}")
+  end
 end

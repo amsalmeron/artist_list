@@ -1,16 +1,17 @@
 
-<%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings?sort=asc", method: :get %>
-<%= link_to "Add New Painting", "/artists/#{@artist.id}/paintings/new" %>
-
-<%= form_with url: "/artists/#{@artist.id}/paintings", method: :get, local: true do |form| %>
-  <%= form.label :threshold, "Year Threshold" %>
-  <%= form.text_field :threshold %>
-  <%= form.submit "Submit Year Threshold" %>
-<% end %>
 
 <% @paintings.each do |painting| %>
   <h2><%= painting.name %></h2>
   Finished in: <%= painting.year_finished %><br>
   Uses abstract styling: <%= painting.abstract %>
-  <p> <%= button_to "Delete #{painting.name}", "/paintings/#{painting.id}", method: :delete %></p>
+  <p> <%= button_to "Delete #{painting.name}", "/paintings/#{painting.id}", method: :delete %></p> <hr>
 <% end %>
+
+
+<%= form_with url: "/artists/#{@artist.id}/paintings", method: :get, local: true do |form| %>
+<%= form.label :threshold, "Year Threshold" %>
+<%= form.text_field :threshold %>
+<%= form.submit "Submit Year Threshold" %>
+<% end %>
+<%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings?sort=asc", method: :get %>
+<%= link_to "Add New Painting", "/artists/#{@artist.id}/paintings/new" %>
