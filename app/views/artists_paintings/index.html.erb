@@ -1,5 +1,5 @@
 
-
+<h1><%= "#{@artist.name} Paintings" %></h1>
 <% @paintings.each do |painting| %>
   <h2><%= painting.name %></h2>
   Finished in: <%= painting.year_finished %><br>
@@ -9,9 +9,9 @@
 
 
 <%= form_with url: "/artists/#{@artist.id}/paintings", method: :get, local: true do |form| %>
-<%= form.label :threshold, "Year Threshold" %>
+<%= form.label :threshold, "Create Year Threshold" %>
 <%= form.text_field :threshold %>
 <%= form.submit "Submit Year Threshold" %>
 <% end %>
-<%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings?sort=asc", method: :get %>
+<%= link_to "Sort by Alphabetical Order", "/artists/#{@artist.id}/paintings?sort=asc", method: :get %><br>
 <%= link_to "Add New Painting", "/artists/#{@artist.id}/paintings/new" %>

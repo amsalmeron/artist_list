@@ -19,7 +19,7 @@ RSpec.describe 'artists edit' do
 
     fill_in 'Name', with: 'Bahhhh'
     fill_in 'Year finished', with: 2
-    fill_in 'Abstract', with: false
+    fill_in 'Abrstact (true/false)', with: false
     click_button "Update Painting"
 
     expect(current_path).to eq("/paintings/#{painting.id}")

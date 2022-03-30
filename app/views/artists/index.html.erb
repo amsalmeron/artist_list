@@ -2,7 +2,6 @@
 
 <% @artists.each do |artist| %>
   <h2><%= artist.name %></h2>
-  <p>ID Number: <%= "#{artist.id}" %></p>
   <h4>Record created at: <%= artist.created_at %> </h4>
   <p>Born in <%= artist.birth_year %></p>
   <p>Still living: <%= artist.living %></p>

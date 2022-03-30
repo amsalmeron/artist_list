@@ -19,7 +19,7 @@ RSpec.describe 'artists edit' do
 
     fill_in 'Name', with: 'Vincent'
     fill_in 'Birth year', with: 1853
-    fill_in 'Living', with: false
+    fill_in "Living (true/false)", with: false
     click_button 'Update Artist'
 
     expect(current_path).to eq("/artists/#{artist.id}")
